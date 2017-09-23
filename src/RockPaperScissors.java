@@ -6,8 +6,7 @@ public class RockPaperScissors {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your move?");
         String move = scanner.nextLine();
-        convert(move);
-        mortalKombat(move, staticComputer);
+        mortalKombat( convert(move), staticComputer);
         //battleReport(move, staticComputer);
 
     }
