@@ -24,7 +24,7 @@ class Gregorian {
 
     public static String dateToDay(int year, int monthInput, int day) {
         if (monthInput < 3) {
-            monthInput = monthInput += 12;
+            monthInput += 12;
         }
         int numericalDateToDay = (day + (((monthInput + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
                 (5 * century(year))) % 7;
