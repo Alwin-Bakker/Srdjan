@@ -23,13 +23,10 @@ class Gregorian {
     }
 
     public static String dateToDay(int year, int monthInput, int day) {
-        int month;
         if (monthInput < 3) {
-            month = monthInput + 12;
-        } else {
-            month = monthInput;
+            monthInput = monthInput += 12;
         }
-        int numericalDateToDay = (day + (((month + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
+        int numericalDateToDay = (day + (((monthInput + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
                 (5 * century(year))) % 7;
         if (numericalDateToDay == 0) {
             String dateToDay = "Saturday";
