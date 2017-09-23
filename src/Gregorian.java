@@ -13,13 +13,11 @@ class Gregorian {
     }
 
     public static int century(int year) {
-        int century = year / 100;
-        return century;
+        return year / 100;
     }
 
     public static int yearpart(int year) {
-        int yearpart = year % 100;
-        return yearpart;
+        return year % 100;
     }
 
     public static String dateToDay(int year, int month, int day) {
