@@ -22,11 +22,11 @@ class Gregorian {
         return yearpart;
     }
 
-    public static String dateToDay(int year, int monthInput, int day) {
-        if (monthInput < 3) {
-            monthInput += 12;
+    public static String dateToDay(int year, int month, int day) {
+        if (month < 3) {
+            month += 12;
         }
-        int numericalDateToDay = (day + (((monthInput + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
+        int numericalDateToDay = (day + (((month + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
                 (5 * century(year))) % 7;
         if (numericalDateToDay == 0) {
             String dateToDay = "Saturday";
