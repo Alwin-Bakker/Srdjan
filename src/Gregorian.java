@@ -29,31 +29,24 @@ class Gregorian {
         int numericalDateToDay = (day + (((month + 1) * 26) / 10) + yearpart(year) + (yearpart(year) / 4) + (century(year) / 4) +
                 (5 * century(year))) % 7;
         if (numericalDateToDay == 0) {
-            String dateToDay = "Saturday";
-            return dateToDay;
+            return "Saturday";
         }
         if (numericalDateToDay == 1) {
-            String dateToDay = "Sunday";
-            return dateToDay;
+            return "Sunday";
         }
         if (numericalDateToDay == 2) {
-            String dateToDay = "Monday";
-            return dateToDay;
+            return "Monday";
         }
         if (numericalDateToDay == 3) {
-            String dateToDay = "Tuesday";
-            return dateToDay;
+            return "Tuesday";
         }
         if (numericalDateToDay == 4) {
-            String dateToDay = "Wednesday";
-            return dateToDay;
+            return "Wednesday";
         }
         if (numericalDateToDay == 5) {
-            String dateToDay = "Thursday";
-            return dateToDay;
+            return "Thursday";
         } else {
-            String dateToDay = "Friday";
-            return dateToDay;
+            return "Friday";
         }
     }
 }
